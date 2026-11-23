@@ -1,0 +1,47 @@
+{
+  "name": "opencode-conductor",
+  "version": "0.1.0",
+  "description": "Bidirectional two-phase Planner and Executor model switching plugin for OpenCode 2.",
+  "type": "module",
+  "license": "GPL-3.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "peerDependencies": {
+    "@opencode/plugin": ">=2.3.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@opencode/plugin": "2.4.1",
+    "@types/node": "^24.0.0",
+    "@vitest/coverage-v8": "^4.0.0",
+    "eslint": "^9.39.2",
+    "eslint-plugin-sonarjs": "^3.0.5",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.53.0",
+    "vitest": "^4.0.0"
+  }
+}
